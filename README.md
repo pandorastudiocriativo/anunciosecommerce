@@ -1,5 +1,4 @@
 # anunciosecommerce
-[landing-anuncios-ml (4).html](https://github.com/user-attachments/files/26848151/landing-anuncios-ml.4.html)
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -108,7 +107,7 @@
 
   h1 {
     font-family: 'Playfair Display', serif;
-    font-size: min(max(56px, 6.5vw), 86px);
+    font-size: 72px;
     font-weight: 800;
     line-height: 1.05;
     letter-spacing: -2px;
@@ -800,8 +799,7 @@
 
   document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-  // cole sua URL aqui apos o passo 5 do tutorial
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz7OE08wmNfJ8kl1VWtu6rRzLqu9ARVVUX5eERkRweMJioBqV47UztnPOOayBpY5rm4VA/exec';
+  const FORMSPREE_URL = 'https://formspree.io/f/xvzdalll';
   const WA_URL = 'https://api.whatsapp.com/message/CNX7FWROAMBJP1?autoload=1&app_absent=0';
 
   document.querySelector('.btn-submit').addEventListener('click', async function(e) {
@@ -823,10 +821,16 @@
     const body = new FormData();
     body.append('nome', nome);
     body.append('whatsapp', whatsapp);
-    body.append('link', link);
+    body.append('link_anuncio', link);
     body.append('problema', problema);
 
-    try { await fetch(SCRIPT_URL, { method: 'POST', body }); } catch (_) {}
+    try {
+      await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        body: body,
+        headers: { 'Accept': 'application/json' }
+      });
+    } catch (_) {}
 
     btn.textContent = 'Redirecionando para o WhatsApp...';
     btn.style.background = '#1a7a4a';
