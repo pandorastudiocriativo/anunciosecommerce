@@ -1,4 +1,5 @@
 # anunciosecommerce
+[landing-anuncios-ml (4).html](https://github.com/user-attachments/files/26848151/landing-anuncios-ml.4.html)
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -38,7 +39,7 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 20px 40px;
     display: flex; align-items: center; justify-content: space-between;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid transparent;
     background: rgba(7,13,26,0.94);
     backdrop-filter: blur(12px);
   }
@@ -107,7 +108,7 @@
 
   h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(52px, 6.5vw, 82px);
+    font-size: min(max(56px, 6.5vw), 86px);
     font-weight: 800;
     line-height: 1.05;
     letter-spacing: -2px;
@@ -115,6 +116,7 @@
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    border: none;
   }
   h1 em {
     font-style: normal;
@@ -160,7 +162,7 @@
     grid-template-columns: repeat(4, auto);
     gap: 0;
     margin-top: 80px;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid rgba(180,200,255,0.12);
     padding-top: 48px;
     width: fit-content;
     margin-left: auto;
