@@ -107,7 +107,7 @@
 
   h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 72px;
+    font-size: 96px;
     font-weight: 800;
     line-height: 1.05;
     letter-spacing: -2px;
@@ -186,7 +186,7 @@
   .stat-label { font-size: 13px; color: var(--muted); font-weight: 400; }
 
   /* ─── PAIN ─── */
-  #pain { border-top: 1px solid var(--border); }
+  #pain { border-top: none; }
 
   .section-label {
     font-size: 12px;
@@ -199,7 +199,7 @@
 
   h2 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(36px, 4.5vw, 54px);
+    font-size: 52px;
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1.5px;
@@ -252,7 +252,7 @@
   .pain-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
   /* ─── SOLUTION ─── */
-  #solution { border-top: 1px solid var(--border); }
+  #solution { border-top: none; }
 
   .solution-grid {
     display: grid;
@@ -328,7 +328,7 @@
   }
 
   /* ─── TESTIMONIALS ─── */
-  #testimonials { border-top: 1px solid var(--border); }
+  #testimonials { border-top: none; }
 
   .testi-grid {
     display: grid;
@@ -365,7 +365,7 @@
   .testi-role { font-size: 12px; color: var(--muted); }
 
   /* ─── PARA QUEM ─── */
-  #para-quem { border-top: 1px solid var(--border); }
+  #para-quem { border-top: none; }
 
   .who-grid {
     display: grid;
@@ -396,7 +396,7 @@
 
   /* ─── CTA ─── */
   #cta {
-    border-top: 1px solid var(--border);
+    border-top: none;
     text-align: center;
     padding: 120px 40px;
     max-width: 100%;
@@ -754,11 +754,11 @@
 
       <div class="form-group">
         <label>Seu nome</label>
-        <input type="text" placeholder="João Silva">
+        <input type="text" placeholder="João Silva" required>
       </div>
       <div class="form-group">
         <label>WhatsApp</label>
-        <input type="tel" placeholder="(11) 99999-9999">
+        <input type="tel" placeholder="(11) 99999-9999" required>
       </div>
       <div class="form-group">
         <label>Link do seu anúncio no ML</label>
